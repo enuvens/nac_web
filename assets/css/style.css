@@ -3,17 +3,53 @@ html, body{
 }
 
 header{
-  height: 100px;
-  background-color: #454656;
-  color: #FFF;
   margin: 0px;
   text-align: center;
 }
 
-header .logo img{
-  max-height: 100px;
+.topo{
+  width: 100%;
+  background-color: #000;
 }
 
+.logo{
+  padding: 10px;
+  width: 900px;
+  margin: auto;
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 18px;
+  text-align: left;
+}
+
+.infos{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  float: right;
+}
+
+.infos a, .infos a:hover, .infos a:visited{
+  color:#FFF;
+  text-decoration: none;
+}
+
+.botao, .botao:visited{
+  background-color: #FFF;
+  color: #000 !important;
+  padding: 5px 12px 5px 10px;
+}
+
+.botao:hover{
+  background-color: #696969;
+  color: #FFF;
+}
+
+.telefone, .reserva{
+  padding-left: 20px;
+}
 
 header nav ul{
   list-style-type: none;
@@ -54,4 +90,8 @@ footer div{
 
 .clear{
   clear: both;
+}
+
+@media only screen and (max-width: 500px) {
+
 }

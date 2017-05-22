@@ -7,33 +7,27 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i|Roboto:400,700" rel="stylesheet">
-
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
 
   </head>
   <body>
 
     <header>
-      <div class="topo">
-        <div class="logo">
-          Hotel Boa viagem
-          <div class="infos">
-            <span class="email"><a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a></span>
-            <span class="telefone">(11) 3385-8010</span>
-            <span class="reserva"><a href="reservas.html" class="botao">Reservas</a></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu">
+      <div class="logo"><img src="assets/img/logo.jpg" alt="" /></div>
         <nav>
           <ul>
             <li><a href="">Reserva</a></li>
           </ul>
         </nav>
-      </div>
     </header>
 
     <div class="clear"></div>
@@ -43,8 +37,8 @@
         <form action="index.html" method="post">
           <div>
             <fieldset>
-              <label>Nome</label>
-              <input type="text" name="name" id="name" value="" />
+              <label>Entrada</label>
+              <input type="text" name="name" id="datepicker" value="" />
             </fieldset>
             <fieldset>
               <label>Sobrenome</label>
