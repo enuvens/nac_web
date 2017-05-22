@@ -1,0 +1,57 @@
+html, body{
+  margin: 0px;
+}
+
+header{
+  height: 100px;
+  background-color: #454656;
+  color: #FFF;
+  margin: 0px;
+  text-align: center;
+}
+
+header .logo img{
+  max-height: 100px;
+}
+
+
+header nav ul{
+  list-style-type: none;
+}
+
+header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* Contato */
+.contato{
+  float: left;
+  width: 50%;
+}
+
+.mapa{
+  float: left;
+  width: 50%;
+}
+
+.mapa iframe{
+  max-width: 100%;
+}
+
+
+/* Footer */
+
+footer{
+  background-color: #000;
+  color: #FFF;
+  text-align: center;
+}
+
+footer div{
+  padding:20px;
+}
+
+.clear{
+  clear: both;
+}
