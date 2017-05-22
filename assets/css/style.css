@@ -169,6 +169,7 @@ header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
 
 .usuarios{
   font-style: italic;
+  padding-top: 15px;
 }
 
 /* Contato */
@@ -187,22 +188,31 @@ header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
 }
 
 
-/* Footer */
+/* Clear */
+.clear{
+  clear: both;
+}
 
+
+/* Footer */
 footer{
   margin-top: 100px;
   background-color: #000;
   color: #FFF;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: top;
 }
 
 footer div{
   padding:20px;
 }
 
-.clear{
-  clear: both;
+footer .coluna_01, footer .coluna_02, footer .coluna_03{
+  width: 25%;
+  display: inline;
 }
+
 
 @media only screen and (max-width: 500px) {
 
