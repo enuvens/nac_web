@@ -2,6 +2,7 @@ html, body{
   margin: 0px;
 }
 
+/* Cabeçalho */
 header{
   margin: 0px;
   text-align: center;
@@ -43,7 +44,7 @@ header{
 }
 
 .botao:hover{
-  background-color: #696969;
+  background-color: #A9A9A9;
   color: #FFF;
 }
 
@@ -55,9 +56,119 @@ header nav ul{
   list-style-type: none;
 }
 
+header nav ul li{
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  padding: 20px;
+}
+
 header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
-  color: #FFF;
+  color: #000;
   text-decoration: none;
+}
+
+.reserva{
+  width: 900px;
+  background-color: #000;
+  color: #FFF;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  height:50px;
+}
+
+.reserva div{
+  float: left;
+  padding-left: 15px;
+}
+
+.reserva input, .reserva select{
+  width: 80px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+.pesquisa{
+  background-color: #FFF;
+  color: #000 !important;
+  width: 100px;
+  border: 0px;
+}
+
+/* Area */
+.area{
+  width: 900px;
+  margin: auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+.area h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.area h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+}
+
+/* serviços */
+.servicos{
+  width: 900px;
+  color: #000;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.servicos div{
+  display: inline-block;
+  padding: 20px;
+}
+
+.maps{
+  width: 900px;
+  color: #000;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.maps .texto, .maps .embed{
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+
+
+.elogios{
+  width: 900px;
+  color: #000;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.elogios .coluna_01, .elogios .coluna_02{
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}
+
+.usuarios{
+  font-style: italic;
 }
 
 /* Contato */
@@ -79,6 +190,7 @@ header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
 /* Footer */
 
 footer{
+  margin-top: 100px;
   background-color: #000;
   color: #FFF;
   text-align: center;
