@@ -8,43 +8,15 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i|Roboto:400,700" rel="stylesheet">
-
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    jQuery(function($){
-            $.datepicker.regional['pt-BR'] = {
-                    closeText: 'Fechar',
-                    prevText: '&#x3c;Anterior',
-                    nextText: 'Pr&oacute;ximo&#x3e;',
-                    currentText: 'Hoje',
-                    monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho',
-                    'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-                    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
-                    'Jul','Ago','Set','Out','Nov','Dez'],
-                    dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
-                    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
-                    dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
-                    weekHeader: 'Sm',
-                    dateFormat: 'dd/mm/yy',
-                    firstDay: 0,
-                    isRTL: false,
-                    showMonthAfterYear: false,
-                    yearSuffix: ''};
-            $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
-    });
 
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
-    $( function() {
-      $( "#checkin" ).datepicker();
-      $( "#checkout" ).datepicker();
-    } );
-    </script>
   </head>
   <body>
 
@@ -62,68 +34,61 @@
       <div class="menu">
         <nav>
           <ul>
-            <li><a href="">Início</a></li>
-            <li><a href="">Reservas</a></li>
-            <li><a href="">Contato</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="busca.html">Busca</a></li>
+            <li><a href="cadastro.html">Cadstro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contato.html">Contato</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="reserva">
-      <form action="index.html" method="post">
-        <div>
-          <label for="checkin">Checkin</label><br />
-          <input type="text" id="checkin" name="checkin" value=""/>
-        </div>
-        <div>
-          <label for="checkout">Checkout</label><br />
-          <input type="text" id="checkout" name="checkout" value=""/>
-        </div>
-        <div>
-          <label for="adultos">Adultos</label><br />
-          <select name="adultos">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-        </div>
-        <div>
-          <label for="criancas">Crianças</label><br />
-          <select name="criancas">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-        </div>
-        <div><br />
-          <input type="submit" value="Pesquisar" class="pesquisa" />
-        </div>
-      </form>
-    </section>
-
-    <div class="clear"></div>
-
     <section class="area">
-      <h1>Hotel Boa Viagem</h1>
-      <h2>Sinta-se em casa quando estiver longe</h2>
+      <div class="reserva">
+        <form id="frmReserva" action="reservas.html" method="get" onsubmit="return ValidaFormReserva(this);">
+          <div>
+            <input type="text" id="checkin" name="checkin" value="Checkin" maxlength="10"/>
+          </div>
+          <div>
+            <input type="text" id="checkout" name="checkout" value="Checkout"/>
+          </div>
+          <div>
+            <select name="adultos">
+              <option value="0">Adultos</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+          <div>
+            <select name="criancas">
+              <option value="0">Crianças</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+          <div>
+            <input type="submit" value="Pesquisar" class="btn-pesquisa" />
+          </div>
+        </form>
+      </div>
     </section>
 
-    <hr />
 
     <section class="servicos">
       <div class="wifi">
@@ -160,43 +125,22 @@
 
     <div class="clear"></div>
 
-    <section class="elogios">
-      <div class="coluna_01">
-        <h2>As pessoas fazem elogios...</h2>
-        <div class="usuarios right">
-          Permita que seus clientes recomendem seus serviços e digam a seus amigos quão profissional você é<br />
-          Danielle Brito
-        </div>
-        <div class="usuarios right">
-          Permita que seus clientes recomendem seus serviços e digam a seus amigos quão profissional você é<br />
-          Danielle Brito
-        </div>
-        <div class="usuarios right">
-          Permita que seus clientes recomendem seus serviços e digam a seus amigos quão profissional você é<br />
-          Danielle Brito
-        </div>
-      </div>
-      <div class="coluna_02">
-
-      </div>
-    </section>
-
-    <div class="clear"></div>
-
     <footer>
-      <div class="coluna_01">
-        <h3>Entre em Contato</h3>
-        <a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a><br />
-        Telefone: (11) 3385-8010
-      </div>
-      <div class="coluna_02">
-        Endereço: Rua das Olimpiadas, 186<br />
-        Vila Olímpia - São Paulo / SP
-      </div>
-      <div class="coluna_03">
-          Aceitamos<br />
-          <i class="fa fa-cc-visa" aria-hidden="true"></i>
-          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+      <div class="rodape">
+        <div class="coluna_01">
+          <strong>Entre em Contato</strong><br />
+          <a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a><br />
+          Telefone: (11) 3385-8010
+        </div>
+        <div class="coluna_02">
+          Endereço: Rua das Olimpiadas, 186<br />
+          Vila Olímpia - São Paulo / SP
+        </div>
+        <div class="coluna_03">
+            Aceitamos<br />
+            <i class="fa fa-cc-visa" aria-hidden="true"></i>
+            <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        </div>
       </div>
     </footer>
   </body>

@@ -63,30 +63,79 @@ header nav ul li{
   padding: 20px;
 }
 
-header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
+header nav ul li a, header nav ul li a:visited{
   color: #000;
   text-decoration: none;
+  transition: color 0.5s;
+}
+
+header nav ul li a:hover{
+  color: #b5876d;
+}
+
+
+/* Area */
+.area{
+  width: 100%;
+  background-image: url('../img/capa_hotel_04.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height:500px;
+  text-align: center;
+  vertical-align: bottom;
 }
 
 .reserva{
   width: 900px;
-  background-color: #000;
   color: #FFF;
   margin: auto;
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  height:50px;
+  font-size: 14px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
+.reserva form{
+  background-color: rgba(181, 135, 109, 0.8);
+  margin-top:450px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 12px 12px 14px #000000;
+}
 .reserva div{
-  float: left;
+  display: inline-block;
   padding-left: 15px;
 }
 
 .reserva input, .reserva select{
-  width: 80px;
+  width: 90px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+  border: 0 none;
+  color: #626262;
+  padding-left: 10px;
+}
+
+.reserva input:hover, .reserva select:hover{
+  border-color: 1px solid #FF0000;
+}
+
+.btn-pesquisa{
+  background-color: #FFF;
+  color: #000;
+  font-family: "Raleway",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 1.0s linear, color 1.0s linear;
+  border-color: #b5876d;
+  width: 150px !important;
+}
+
+.btn-pesquisa:hover{
+  color: #FFF;
+  background-color: #000;
 }
 
 .pesquisa{
@@ -94,27 +143,6 @@ header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
   color: #000 !important;
   width: 100px;
   border: 0px;
-}
-
-/* Area */
-.area{
-  width: 900px;
-  margin: auto;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  text-align: center;
-}
-
-.area h1{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 40px;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.area h2{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
 }
 
 /* serviços */
@@ -125,11 +153,21 @@ header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   text-align: center;
+  padding-top:100px;
 }
 
 .servicos div{
   display: inline-block;
   padding: 20px;
+}
+
+.wifi, .estacionamento, .aeroporto, .limpeza{
+  transition: color 0.5s linear;
+  -webkit-transition: color 0.5s linear;
+}
+
+.wifi:hover, .estacionamento:hover, .aeroporto:hover, .limpeza:hover{
+  color: #454656;
 }
 
 .maps{
@@ -193,24 +231,42 @@ header nav ul li a, header nav ul li a:visited, header nav ul li a:hover{
   clear: both;
 }
 
+/* Resultados reserva */
+.resultado{
+  width: 900px;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #000;
+  padding:20px;
+  background-color: rgba(181, 135, 109, 0.8);
+}
+
+
 
 /* Footer */
 footer{
   margin-top: 100px;
   background-color: #000;
+  height: 150px;
   color: #FFF;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   vertical-align: top;
 }
 
-footer div{
+footer .rodape{
+  width: 900px;
+  margin: auto;
+}
+
+footer .rodape div{
   padding:20px;
 }
 
 footer .coluna_01, footer .coluna_02, footer .coluna_03{
   width: 25%;
-  display: inline;
+  float: left;
 }
 
 

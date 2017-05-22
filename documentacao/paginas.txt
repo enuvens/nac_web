@@ -1,7 +1,17 @@
+Home
 Reserva
+	
 	- Cadastro usuario
+	
 	- Selecionar Quarto
+	
 	- Efetuar Reserva
 
 Contato
 
+	
+Login
+Pesquisa
+
+
+http://devitems.com/preview/hotel-atr/index.html

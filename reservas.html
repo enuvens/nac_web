@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hotel Boa viagem :: Reservas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="topo">
+        <div class="logo">
+          Hotel Boa viagem
+          <div class="infos">
+            <span class="email"><a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a></span>
+            <span class="telefone">(11) 3385-8010</span>
+            <span class="reserva"><a href="reservas.html" class="botao">Reservas</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="busca.html">Busca</a></li>
+            <li><a href="cadastro.html">Cadstro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <section class="resultado">
+      <div class="container">
+        <div class="busca">
+          <strong>Data de Checkin:</strong> <span id="dt_checkin"></span><br />
+          <strong>Data de Checkout:</strong> <span id="dt_checkout"></span><br />
+          <strong>Pessoas:</strong> <span id="adultos"></span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer>
+      <div class="rodape">
+        <div class="coluna_01">
+          <strong>Entre em Contato</strong><br />
+          <a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a><br />
+          Telefone: (11) 3385-8010
+        </div>
+        <div class="coluna_02">
+          Endereço: Rua das Olimpiadas, 186<br />
+          Vila Olímpia - São Paulo / SP
+        </div>
+        <div class="coluna_03">
+            Aceitamos<br />
+            <i class="fa fa-cc-visa" aria-hidden="true"></i>
+            <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        </div>
+      </div>
+    </footer>
+
+<script type="text/javascript">
+
+  var checkin = getVar("checkin");
+  var checkout = getVar("checkout");
+  var adultos = getVar("adultos");
+  var criancas = getVar("criancas");
+
+  if (checkin != ""){
+    document.getElementById('dt_checkin').innerHTML = checkin;
+  }
+  if (checkout != ""){
+    document.getElementById('dt_checkout').innerHTML = checkout;
+  }
+  if (adultos != ""){
+    if (criancas != "0"){
+      document.getElementById('adultos').innerHTML = adultos +" adultos e "+ criancas +" crianças";
+    } else {
+      document.getElementById('adultos').innerHTML = adultos +" adultos";
+    }
+  }
+</script>
+
+  </body>
+</html>
