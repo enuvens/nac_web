@@ -33,7 +33,6 @@ function ValidaFormReserva(frm){
   var dt_entrada = frm.checkin.value;
   var dt_saida = frm.checkout.value;
 
-
   if(frm.checkin.value == "Checkin" || frm.checkin.value == null) {
     frm.checkin.focus();
     return false;
@@ -54,8 +53,6 @@ function ValidaFormReserva(frm){
     return false;
   }
 
-
-
   if(frm.adulto.value == "0") {
     frm.adulto.focus();
     return false;
@@ -67,6 +64,67 @@ function ValidaFormReserva(frm){
   }
 
   return true;
+}
+
+function LimpaAvisos(){
+  document.getElementById('login_erro').style = 'display: none';
+  document.getElementById('email').style = 'border: 0px';
+  document.getElementById('senha').style = 'border: 0px';
+}
+
+function ValidaLogin(frm){
+  if(frm.email.value == "" || frm.email.value == null) {
+    frm.email.focus();
+    document.getElementById('login_erro').style = 'display: inline';
+    document.getElementById('email').style = 'border: 1px solid #FF0000';
+    return false;
+  }
+  if(frm.senha.value == "" || frm.senha.value == null) {
+    frm.senha.focus();
+    document.getElementById('login_erro').style = 'display: inline';
+    document.getElementById('senha').style = 'border: 1px solid #FF0000';
+    return false;
+  }
+
+  if (frm.email.value == "user@area.com" && frm.senha.value == "123456"){
+    return true;
+  } else {
+    document.getElementById('login_erro').style = 'display: inline';
+    return false;
+  }
+}
+
+/* validação do formulario de contato */
+function ValidaContato(frm){
+
+  if(frm.nome.value == "" || frm.nome.value == null) {
+    frm.nome.focus();
+    document.getElementById('erro_nome').style = "display: inline;";
+    document.getElementById('nome').style = "border: 1px solid #FF0000;";
+    return false;
+  }
+  if(frm.email.value == "" || frm.email.value == null || frm.email.value.indexOf('@')==-1 || frm.email.value.indexOf('.')==-1 ) {
+    frm.email.focus();
+    document.getElementById('erro_email').style = "display: inline;";
+    document.getElementById('email').style = "border: 1px solid #FF0000;";
+    return false;
+  }
+  if (frm.duvida.value.length < 50){
+    frm.duvida.focus();
+    document.getElementById('erro_duvida').style = "display: inline;";
+    document.getElementById('duvida').style = "border: 1px solid #FF0000;";
+    return false;
+  }
+}
+
+/* Valida Busca */
+function ValidaBusca(frm){
+
+  if(frm.busca.value == "" || frm.busca.value == null) {
+    frm.busca.focus();
+    document.getElementById('busca').style = "border: 1px solid #FF0000;";
+    return false;
+  }
 }
 
 /* Trabalhando com Query String */

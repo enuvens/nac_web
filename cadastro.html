@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hotel Boa viagem </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/cadastro.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="topo">
+        <div class="logo">
+          Hotel Boa viagem
+          <div class="infos">
+            <span class="email"><a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a></span>
+            <span class="telefone">(11) 3385-8010</span>
+            <span class="reserva"><a href="reservas.html" class="botao">Reservas</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="busca.html">Busca</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="form-cadastro">
+      <div class="container">
+        <form action="#" method="post">
+            <fieldset>
+                <fieldset class="grupo">
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" style="width: 10em" value="" />
+                    </div>
+                    <div class="campo">
+                        <label for="snome">Sobrenome</label>
+                        <input type="text" id="snome" name="snome" style="width: 10em" value="" />
+                    </div>
+                </fieldset>
+                <div class="campo">
+                    <label>Sexo</label>
+                    <label>
+                        <input type="radio" name="sexo" value="masculino"> Masculino
+                    </label>
+                    <label>
+                        <input type="radio" name="sexo" value="feminino"> Feminino
+                    </label>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" style="width: 20em" value="" />
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" style="width: 10em"  value="" />
+                </div>
+
+                <fieldset class="grupo">
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" style="width: 10em" value="" />
+                    </div>
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <select name="estado" id="estado">
+                            <option value="">--</option>
+                            <option value="SP">SP</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div class="campo">
+                    <label>Newsletter</label>
+                    <label>
+                        <input type="checkbox" name="newsletter" value="1"> Gostaria de receber a Newsletter da empresa
+                    </label>
+                </div>
+
+                <button type="submit" name="submit">Enviar</button>
+
+            </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <div class="clear"></div>
+
+
+    <footer>
+      <div class="rodape">
+        <div class="coluna_01">
+          <strong>Entre em Contato</strong><br />
+          <a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a><br />
+          Telefone: (11) 3385-8010
+        </div>
+        <div class="coluna_02">
+          Endereço: Rua das Olimpiadas, 186<br />
+          Vila Olímpia - São Paulo / SP
+        </div>
+        <div class="coluna_03">
+          Aceitamos<br />
+          <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

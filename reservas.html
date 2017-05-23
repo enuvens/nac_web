@@ -37,7 +37,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="reservas.html">Reservas</a></li>
             <li><a href="busca.html">Busca</a></li>
-            <li><a href="cadastro.html">Cadstro</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="contato.html">Contato</a></li>
           </ul>
@@ -46,16 +46,110 @@
     </header>
 
 
-    <section class="resultado">
+    <section class="resultado" id="resultado">
       <div class="container">
         <div class="busca">
           <strong>Data de Checkin:</strong> <span id="dt_checkin"></span><br />
           <strong>Data de Checkout:</strong> <span id="dt_checkout"></span><br />
           <strong>Pessoas:</strong> <span id="adultos"></span>
         </div>
-
       </div>
+    </section>
 
+    <section class="area" id="area" style="display: none;">
+      <div class="reserva">
+        <form id="frmReserva" action="reservas.html" method="get" onsubmit="return ValidaFormReserva(this);">
+          <div>
+            <input type="text" id="checkin" name="checkin" value="Checkin" maxlength="10"/>
+          </div>
+          <div>
+            <input type="text" id="checkout" name="checkout" value="Checkout"/>
+          </div>
+          <div>
+            <select name="adultos">
+              <option value="0">Adultos</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+          <div>
+            <select name="criancas">
+              <option value="0">Crianças</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+          <div>
+            <input type="submit" value="Pesquisar" class="btn-pesquisa" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+    <section class="resultado_busca" id="resultado_busca">
+      <div class="listagem">
+        <img src="assets/img/suite.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Master</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/master.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Standard</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/luxo.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Luxo</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/master_luxo.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Master Luxo</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/suite.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Master</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/master.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Standard</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/luxo.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Luxo</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/master_luxo.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Master Luxo</h2>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -86,7 +180,11 @@
 
   if (checkin != ""){
     document.getElementById('dt_checkin').innerHTML = checkin;
+  }else{
+    document.getElementById('resultado').style = "display: none;";
+    document.getElementById('area').style = "display: inline; margin-top: 0px;";
   }
+
   if (checkout != ""){
     document.getElementById('dt_checkout').innerHTML = checkout;
   }
@@ -97,6 +195,8 @@
       document.getElementById('adultos').innerHTML = adultos +" adultos";
     }
   }
+
+
 </script>
 
   </body>

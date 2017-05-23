@@ -45,32 +45,30 @@
       </div>
     </header>
 
-    <section class="form-contato">
+    <section class="form-login">
       <div class="container">
-        <div class="contato">
-          <form action="sucesso_contato.html" method="post" onsubmit="return ValidaContato(this);">
-            <div>
-              <legend>Nome <span class="erro" id="erro_nome">*</span></legend>
-              <input type="text" name="nome" id="nome" value=""/>
-            </div>
-            <div>
-              <legend>Email <span class="erro" id="erro_email">*</span></legend>
-              <input type="email" name="email" id="email" value=""/>
-            </div>
-            <div>
-              <legend>Dúvida <span class="erro" id="erro_duvida">*</span></legend>
-              <textarea name="duvida" rows="8" cols="40"></textarea>
-            </div>
-            <div class="contato-enviar">
-              <input type="submit" value="Enviar" class="btn-pesquisa" />
-            </div>
+        <div class="login">
+          <h2>Login</h2>
+          <form action="paineldecontrole.html" method="post" onsubmit="return ValidaLogin(this);">
+              <div class="erro" id="login_erro">Email ou senha invalidos</div>
+              <div>
+                <input type="email" name="email" id="email" placeholder="Email" value="" onfocus="LimpaAvisos();"/>
+              </div>
+              <div>
+                <input type="password" name="senha" id="senha" placeholder="Senha" value=""/>
+              </div>
+              <div class="contato-enviar">
+                <input type="submit" value="Enviar" class="btn-pesquisa" />
+              </div>
           </form>
-        </div>
-        <div class="mapa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.251140628446!2d-46.68751058544177!3d-23.595324484666044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5748b6a8112f%3A0x23b1465a2feba49a!2sR.+Olimp%C3%ADadas%2C+186+-+Itaim+Bibi%2C+S%C3%A3o+Paulo+-+SP!5e0!3m2!1spt-BR!2sbr!4v1495454671089" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </section>
+
+    <div class="aviso">
+      Login: user@area.com<br />
+      Senha: 123456
+    </div>
 
     <div class="clear"></div>
 
