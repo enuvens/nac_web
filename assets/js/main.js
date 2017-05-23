@@ -27,6 +27,19 @@ $( function() {
   $( "#checkout" ).datepicker();
 });
 
+/* Validação Consumo */
+function ValidaConsumo(frm){
+  if (frm.numero_quarto.value == "" || frm.numero_quarto.value == null){
+    frm.numero_quarto.focus();
+    alert("Selecione um quarto");
+    //alert(frm.numero_quarto.value);
+    return false;
+  } else {
+    alert("Consumação adicionada com sucesso!");
+  }
+}
+
+
 /* validação do formulario da home */
 function ValidaFormReserva(frm){
 
@@ -46,6 +59,8 @@ function ValidaFormReserva(frm){
 
   dt_saida = dt_saida.replace("/", "");
   dt_saida = dt_saida.replace("/", "");
+
+  alert(dt_entrada +"/"+ dt_saida);
 
   if (dt_saida < dt_entrada){
     alert("A data de checkout deve ser maior que a data de checkin!");
@@ -123,6 +138,16 @@ function ValidaBusca(frm){
   if(frm.busca.value == "" || frm.busca.value == null) {
     frm.busca.focus();
     document.getElementById('busca').style = "border: 1px solid #FF0000;";
+    return false;
+  }
+}
+
+function ValidaNumReserva(frm){
+
+  if (frm.numero_reserva.value == "" || frm.numero_reserva.value == null){
+    frm.numero_reserva.focus();
+    document.getElementById('numero_reserva').style = "border: 1px solid #FF0000;";
+    alert('Número da Reserva não informado');
     return false;
   }
 }

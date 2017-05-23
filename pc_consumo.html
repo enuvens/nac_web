@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hotel Boa viagem </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/painel_de_controle.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="topo">
+        <div class="logo">
+          Hotel Boa viagem
+        </div>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a href="pc_reserva.html">Reservas</a></li>
+            <li><a href="pc_consumo.html">Consumo</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="consumo">
+      <form method="get" action="#" onsubmit="return ValidaConsumo(this);">
+      <div class="container">
+        <div class="pc_consumo">
+          <label for="numero_quarto">Código do hospede</label>
+          <select name="numero_quarto">
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+          </select>
+
+        </div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Quantidade</th>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Cabeleireiro - Corte Masculino</td>
+            <td>R$ 30,00</td>
+            <td>
+              <input type="text" id="c10" name="" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c10').val(parseInt($('#c10').val())+1)">
+              <input type="button" value="-" onclick="$('#c10').val(parseInt($('#c10').val())-1)">
+            </td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Cabeleireiro - Corte Feminino</td>
+            <td>R$50,00</td>
+            <td><input type="text" id="c11" name="" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c11').val(parseInt($('#c11').val())+1)">
+              <input type="button" value="-" onclick="$('#c11').val(parseInt($('#c11').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Cabeleireiro - Escova</td>
+            <td>R$40,00</td>
+            <td><input type="text" id="c12" name="c12" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c12').val(parseInt($('#c12').val())+1)">
+              <input type="button" value="-" onclick="$('#c12').val(parseInt($('#c12').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Translado ao Aeroporto</td>
+            <td>R$50,00</td>
+            <td><input type="text" id="c15" name="c15" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c15').val(parseInt($('#c15').val())+1)">
+              <input type="button" value="-" onclick="$('#c15').val(parseInt($('#c15').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>SPA - Massagem</td>
+            <td>R$30,00</td>
+            <td><input type="text" id="c16" name="c16" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c16').val(parseInt($('#c16').val())+1)">
+              <input type="button" value="-" onclick="$('#c16').val(parseInt($('#c16').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>SPA - Ôfuro</td>
+            <td>R$30,00</td>
+            <td><input type="text" id="c17" name="c17" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c17').val(parseInt($('#c17').val())+1)">
+              <input type="button" value="-" onclick="$('#c17').val(parseInt($('#c17').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Room Service - Almoço ou Jantar (pratos típicos)</td>
+            <td>R$50,00</td>
+            <td><input type="text" id="c18" name="c18" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c18').val(parseInt($('#c18).val())+1)">
+              <input type="button" value="-" onclick="$('#c18').val(parseInt($('#c18').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>Room Service - Café da Manhã</td>
+            <td>R$20,00</td>
+            <td><input type="text" id="c19" name="c19" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c19').val(parseInt($('#c19').val())+1)">
+              <input type="button" value="-" onclick="$('#c19').val(parseInt($('#c19').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>Telefonema Cobertura Local - Fixo</td>
+            <td>R$0,50 (Minuto)</td>
+            <td><input type="text" id="c20" name="c20" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c20').val(parseInt($('#c20').val())+1)">
+              <input type="button" value="-" onclick="$('#c20').val(parseInt($('#c20').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>Telefonema Cobertura Local - Celular</td>
+            <td>R$2,00 (Minuto)</td>
+            <td><input type="text" id="c21" name="c21" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c21').val(parseInt($('#c21').val())+1)">
+              <input type="button" value="-" onclick="$('#c21').val(parseInt($('#c21').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Telefonema Cobertura Nacional - Fixo</td>
+            <td>R$1,00 (Minuto)</td>
+            <td><input type="text" id="c22" name="c22" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c22').val(parseInt($('#c22').val())+1)">
+              <input type="button" value="-" onclick="$('#c22').val(parseInt($('#c22').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>Telefonema Cobertura Nacional - Celular</td>
+            <td>R$2,50 (Minuto)</td>
+            <td><input type="text" id="c23" name="c23" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c23').val(parseInt($('#c23').val())+1)">
+              <input type="button" value="-" onclick="$('#c23').val(parseInt($('#c23').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>Telefonema Cobertura Internacional - Fixo</td>
+            <td>R$3,00 (Minuto)</td>
+            <td><input type="text" id="c24" name="c24" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c24').val(parseInt($('#c24').val())+1)">
+              <input type="button" value="-" onclick="$('#c24').val(parseInt($('#c24').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>Telefonema Cobertura Internacional - Celular</td>
+            <td>R$5,00 (Minuto)</td>
+            <td><input type="text" id="c25" name="c25" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c25').val(parseInt($('#c25').val())+1)">
+              <input type="button" value="-" onclick="$('#c25').val(parseInt($('#c25').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>Ligações Skype - qualquer lugar</td>
+            <td>R$0,50</td>
+            <td><input type="text" id="c27" name="c27" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c27').val(parseInt($('#c27').val())+1)">
+              <input type="button" value="-" onclick="$('#c27').val(parseInt($('#c27').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>Room Service - Lavanderia - Calça</td>
+            <td>R$8,00</td>
+            <td><input type="text" id="c28" name="c28" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c28').val(parseInt($('#c28').val())+1)">
+              <input type="button" value="-" onclick="$('#c28').val(parseInt($('#c28').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>Room Service - Lavanderia - Camiseta</td>
+            <td>R$5,00</td>
+            <td><input type="text" id="c29" name="c29" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c29').val(parseInt($('#c29').val())+1)">
+              <input type="button" value="-" onclick="$('#c29').val(parseInt($('#c29').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>Room Service - Lavanderia - Moletons</td>
+            <td>R$7,00</td>
+            <td><input type="text" id="c30" name="c30" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c30').val(parseInt($('#c30').val())+1)">
+              <input type="button" value="-" onclick="$('#c30').val(parseInt($('#c30').val())-1)">
+            </td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>Room Service - Lavanderia - Vestido</td>
+            <td>R$10,00</td>
+            <td><input type="text" id="c31" name="c31" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c31').val(parseInt($('#c31').val())+1)">
+              <input type="button" value="-" onclick="$('#c31').val(parseInt($('#c31').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>Room Service - Lavanderia - Terno</td>
+            <td>R$15,00</td>
+            <td><input type="text" id="c32" name="c32" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c32').val(parseInt($('#c32').val())+1)">
+              <input type="button" value="-" onclick="$('#c32').val(parseInt($('#c32').val())-1)"></td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>Room Service - Lavanderia - Peças Íntimas</td>
+            <td>R$5,00</td>
+            <td><input type="text" id="c33" name="c33" value="0" readonly="" />
+              <input type="button" value="+" onclick="$('#c33').val(parseInt($('#c33').val())+1)">
+              <input type="button" value="-" onclick="$('#c33').val(parseInt($('#c33').val())-1)"></td>
+          </tr>
+        </table>
+        <div class="consumo_enviar">
+          <input type="submit" value="Salvar Consumo" class="btn-pesquisa" />
+        </div>
+      </div>
+    </form>
+    </section>
+
+
+    <div class="clear"></div>
+
+
+    <footer>
+      <div class="rodape">
+        <div class="coluna_01">
+          <strong>Entre em Contato</strong><br />
+          <a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a><br />
+          Telefone: (11) 3385-8010
+        </div>
+        <div class="coluna_02">
+          Endereço: Rua das Olimpiadas, 186<br />
+          Vila Olímpia - São Paulo / SP
+        </div>
+        <div class="coluna_03">
+          Aceitamos<br />
+          <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

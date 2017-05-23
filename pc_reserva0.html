@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hotel Boa viagem </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/painel_de_controle.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="topo">
+        <div class="logo">
+          Hotel Boa viagem
+        </div>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a href="pc_reserva.html">Reservas</a></li>
+            <li><a href="pc_consumo.html">Consumo</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="frm-reserva">
+          <form class="" action="pc_reserva.html" method="get" onsubmit="return ValidaNumReserva(this);">
+            <input type="text" name="numero_reserva" id="numero_reserva" value="" placeholder="Insira o número da reserva" />
+            <input type="submit" name="name" value="Verificar" class="btn-pesquisa">
+          </form>
+        </div>
+        <div class="pc_opcao">
+          Ou
+        </div>
+
+        <section class="pc_area">
+          <div class="pc_reserva">
+            <form id="frmReserva" action="pc_reserva.html" method="get" onsubmit="return ValidaFormReserva(this);">
+              <div>
+                <input type="text" id="checkin" name="checkin" value="Checkin" maxlength="10"/>
+              </div>
+              <div>
+                <input type="text" id="checkout" name="checkout" value="Checkout"/>
+              </div>
+              <div>
+                <select name="adultos">
+                  <option value="0">Adultos</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div>
+                <select name="criancas">
+                  <option value="0">Crianças</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div>
+                <input type="submit" value="Pesquisar" class="btn-pesquisa" />
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="resultado_busca" id="pc_resultado" style="display: none;">
+      <div class="listagem">
+        <img src="assets/img/suite.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Master</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/master.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Standard</h2>
+        </div>
+      </div>
+      <div class="listagem">
+        <img src="assets/img/luxo.jpg" />
+        <div class="informacoes">
+          <h2>Suíte Luxo</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="clear"></div>
+
+
+    <footer>
+      <div class="rodape">
+        <div class="coluna_01">
+          <strong>Entre em Contato</strong><br />
+          <a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a><br />
+          Telefone: (11) 3385-8010
+        </div>
+        <div class="coluna_02">
+          Endereço: Rua das Olimpiadas, 186<br />
+          Vila Olímpia - São Paulo / SP
+        </div>
+        <div class="coluna_03">
+          Aceitamos<br />
+          <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        </div>
+      </div>
+    </footer>
+
+<script type="text/javascript">
+
+  var adultos = getVar("adultos");
+
+  //alert(checkin);
+
+  if (adultos >= 1){
+    document.getElementById('pc_resultado').style = "display: inline;";
+  } else {
+    document.getElementById('pc_resultado').style = "display: none;";
+  }
+
+</script>
+
+  </body>
+</html>

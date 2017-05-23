@@ -65,7 +65,11 @@ header nav ul li{
   display: inline;
   font-family: 'Open Sans', sans-serif;
   color: #000;
-  padding: 20px;
+  padding: 10px;
+  background-color: rgba(181, 135, 109, 1);
+  -moz-border-radius:7px;
+  -webkit-border-radius:7px;
+  border-radius:7px;
 }
 
 header nav ul li a, header nav ul li a:visited{
@@ -75,7 +79,7 @@ header nav ul li a, header nav ul li a:visited{
 }
 
 header nav ul li a:hover{
-  color: #b5876d;
+  color: #FFF;
 }
 
 
@@ -304,7 +308,7 @@ header nav ul li a:hover{
   width:250px;
   margin: auto;
   padding: 20px;
-  background-color: rgba(181, 135, 109);
+  background-color: rgba(181, 135, 109, 1);
   -moz-border-radius:7px;
   -webkit-border-radius:7px;
   border-radius:7px;
@@ -363,6 +367,30 @@ footer .coluna_01, footer .coluna_02, footer .coluna_03{
 }
 
 
-@media only screen and (max-width: 500px) {
-
+@media only screen and (max-width: 900px) {
+  li{
+     display: block !important;
+     margin-top: 3px;
+     width: 70% !important;
+  }
+  .menu{
+    width: 90% !important;
+    display: inline !important;
+  }
+  .area{
+    height: 250px !important;
+  }
+  .reserva, .servicos, .maps{
+    width: 90% !important;
+  }
+  .reserva form{
+    margin-top: 200px !important;
+  }
+  .texto, .embed{
+    width: 90% !important;
+    float: none !important;
+  }
+  .footer, .rodape{
+    width: 100% !important;
+  }
 }
