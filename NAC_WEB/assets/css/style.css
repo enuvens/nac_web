@@ -1,0 +1,135 @@
+html, body{
+  margin: 0px;
+}
+
+/* Header */
+header{
+  margin: 0px;
+  text-align: center;
+}
+
+.topo{
+  width: 100%;
+  background-color: #000;
+}
+
+.logo{
+  padding: 10px;
+  width: 900px;
+  margin: auto;
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 18px;
+  text-align: left;
+}
+
+.infos{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  float: right;
+}
+
+.infos a, .infos a:hover, .infos a:visited{
+  color:#FFF;
+  text-decoration: none;
+}
+
+.botao, .botao:visited{
+  background-color: #FFF;
+  color: #000 !important;
+  padding: 5px 12px 5px 10px;
+}
+
+.botao:hover{
+  background-color: #A9A9A9;
+  color: #FFF;
+}
+
+.telefone, .reserva{
+  padding-left: 20px;
+}
+
+header nav ul{
+  list-style-type: none;
+}
+
+header nav ul li{
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  padding: 10px;
+  background-color: rgba(181, 135, 109, 1);
+  -moz-border-radius:7px;
+  -webkit-border-radius:7px;
+  border-radius:7px;
+}
+
+header nav ul li a, header nav ul li a:visited{
+  color: #000;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+header nav ul li a:hover{
+  color: #FFF;
+}
+
+/* Cadastro */
+.container{
+  width: 500px;
+  margin: auto;
+}
+
+.container h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  border-bottom: 1px solid #CCC;
+}
+
+.form_cadastro div{
+  padding:5px;
+}
+
+label{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+input{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+/* Footer */
+footer{
+  margin-top: 100px;
+  background-color: #000;
+  height: 150px;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+footer a, footer a:visited, footer a:hover{
+  color: #FFF;
+  text-decoration: none;
+}
+
+footer .rodape{
+  width: 900px;
+  margin: auto;
+}
+
+footer .rodape div{
+  padding:20px;
+}
+
+footer .coluna_01, footer .coluna_02, footer .coluna_03{
+  width: 25%;
+  float: left;
+}
