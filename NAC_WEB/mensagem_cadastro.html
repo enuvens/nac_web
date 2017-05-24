@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hotel Boa viagem </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="topo">
+        <div class="logo">
+          Hotel Boa viagem
+          <div class="infos">
+            <span class="email"><a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a></span>
+            <span class="telefone">(11) 3385-8010</span>
+            <span class="reserva"><a href="#" class="botao">Reservas</a></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container sucesso">
+        <h1>Cadastro efetuado com sucesso!</h1>
+        <div class="dados">
+          <p><strong>Nome:</strong> <span id="nome"></span></p>
+          <p><strong>Sexo:</strong> <span id="sexo"></span></p>
+          <p><strong>Email:</strong> <span id="email"></span></p>
+          <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+          <p><strong>Endereço:</strong> <span id="endereco"></span></p>
+          <span id="complemento"></span>
+          <p><strong>CEP:</strong> <span id="cep"></span></p>
+          <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="clear"></div>
+
+    <footer>
+      <div class="rodape">
+        <div class="coluna_01">
+          <strong>Entre em Contato</strong><br />
+          <a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a><br />
+          Telefone: (11) 3385-8010
+        </div>
+        <div class="coluna_02">
+          Endereço: Rua das Olimpiadas, 186<br />
+          Vila Olímpia - São Paulo / SP
+        </div>
+        <div class="coluna_03">
+          Aceitamos<br />
+          <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      var nome              = decode_utf8(getVar('nome'));
+      var snome             = decode_utf8(getVar('snome'));
+      var sexo              = decode_utf8(getVar('sexo'));
+      var email             = decode_utf8(getVar('email'));
+      var ddd               = decode_utf8(getVar('ddd'));
+      var telefone          = decode_utf8(getVar('telefone'));
+      var tipo_logradouro   = decode_utf8(getVar('tipo_logradouro'));
+      var logradouro        = decode_utf8(getVar('logradouro'));
+      var numero            = decode_utf8(getVar('numero'));
+      var complemento       = decode_utf8(getVar('complemento'));
+      var cep               = decode_utf8(getVar('cep'));
+      var bairro            = decode_utf8(getVar('bairro'));
+      var estado            = decode_utf8(getVar('estado'));
+      var cidade            = decode_utf8(getVar('cidade'));
+
+      if (nome != ""){
+        document.getElementById('nome').innerHTML = nome + ' ' + snome;
+      }
+
+      if (sexo == "M"){
+        document.getElementById('sexo').innerHTML = 'Masculino';
+      } else {
+        document.getElementById('sexo').innerHTML = 'Feminino';
+      }
+
+      if (email != ""){
+        document.getElementById('email').innerHTML = email;
+      }
+
+      if (ddd != "" || telefone != ""){
+        document.getElementById('telefone').innerHTML = '(' + ddd + ') '+ telefone;
+      }
+
+      if (tipo_logradouro != "" || logradouro != "" || numero != ""){
+        document.getElementById('endereco').innerHTML = tipo_logradouro + ' '+ logradouro +', '+ numero;
+      }
+
+      if (complemento != ""){
+        document.getElementById('complemento').innerHTML = '<p><strong>Complemento:</strong> '+ complemento +'</p>';
+      }
+
+      if (cep != ""){
+        document.getElementById('cep').innerHTML = cep;
+      }
+
+      if (cidade != "" || estado != ""){
+        document.getElementById('cidade').innerHTML = cidade + '/' + estado;
+      }
+
+
+    </script>
+
+  </body>
+</html>

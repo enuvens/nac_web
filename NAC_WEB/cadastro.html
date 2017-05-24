@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i|Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
     <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <script type="text/javascript" src="assets/js/main.js"></script>
+
+<style>
+
+</style>
 
   </head>
   <body>
@@ -27,150 +25,144 @@
           <div class="infos">
             <span class="email"><a href="mailto:info@boaviagem.com.br">info@boaviagem.com.br</a></span>
             <span class="telefone">(11) 3385-8010</span>
-            <span class="reserva"><a href="reservas.html" class="botao">Reservas</a></span>
+            <span class="reserva"><a href="#" class="botao">Reservas</a></span>
           </div>
         </div>
       </div>
-      <div class="menu">
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="busca.html">Busca</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="contato.html">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
 
-    <section class="form_cadastro">
+    <section>
       <div class="container">
-        <h1>Cadastro</h1>
-        <form action="#" method="get" onsubmit="return ValidaCadastro(this);">
-        <div>
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" style="width: 10em" value="" />
-        </div>
-        <div>
-          <label for="snome">Sobrenome</label>
-          <input type="text" id="snome" name="snome" style="width: 10em" value="" />
-        </div>
-        <div>
-          <label>Sexo</label>
-          <label>
-            <input type="radio" name="sexo" value="masculino" checked=""> Masculino
-          </label>
-          <label>
-            <input type="radio" name="sexo" value="feminino"> Feminino
-          </label>
-        </div>
-        <div class="campo">
-          <label for="email">E-mail</label>
-          <input type="text" id="email" name="email" style="width: 20em" value="" />
-        </div>
-        <div class="campo">
-          <label for="telefone">Telefone</label>
-          <input type="text" id="telefone" name="ddd" style="width: 2em"  value="" />
-          <input type="text" id="telefone" name="telefone" style="width: 10em"  value="" />
-        </div>
-        <div class="campo">
-          <label for="tipo_logradouro">Tipo Logradouro</label>
-          <select name="tipo_logradouro">
-            <option value="ALAMEDA">ALAMEDA</option>
-            <option value="APARTAMENTO">APARTAMENTO</option>
-            <option value="AVENIDA">AVENIDA</option>
-            <option value="BECO">BECO</option>
-            <option value="BLOCO">BLOCO</option>
-            <option value="CAMINHO">CAMINHO</option>
-            <option value="ESCADINHA">ESCADINHA</option>
-            <option value="ESTACAO">ESTAÇÃO</option>
-            <option value="ESTRADA">ESTRADA</option>
-            <option value="FAZENDA">FAZENDA</option>
-            <option value="FORTALEZA">FORTALEZA</option>
-            <option value="GALERIA">GALERIA</option>
-            <option value="LADEIRA">LADEIRA</option>
-            <option value="LARGO">LARGO</option>
-            <option value="PRACA">PRAÇA</option>
-            <option value="PARQUE">PARQUE</option>
-            <option value="PRAIA">PRAIA</option>
-            <option value="QUADRA">QUADRA</option>
-            <option value="QUILOMETRO">QUILÔMETRO</option>
-            <option value="QUINTA">QUINTA</option>
-            <option value="RODOVIA">RODOVIA</option>
-            <option value="RUA">RUA</option>
-            <option value="SUPERQUADRA">SUPER QUADRA</option>
-            <option value="TRAVESSA">TRAVESSA</option>
-            <option value="VIADUTO">VIADUTO</option>
-            <option value="VILA">VILA</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label for="logradouro">Logradouro</label>
-          <input type="text" id="logradouro" name="logradouro" style="width: 10em" value="" />
-        </div>
-        <div class="campo">
-          <label for="logradouro">Número</label>
-          <input type="text" id="numero" name="numero" style="width: 10em" value="" />
-        </div>
-        <div class="campo">
-          <label for="complemento">Complemento</label>
-          <input type="text" id="complemento" name="complemento" style="width: 10em" value="" />
-        </div>
-        <div class="campo">
-          <label for="logradouro">CEP</label>
-          <input type="text" id="cep" name="cep" style="width: 10em" value="" />
-        </div>
-        <div class="campo">
-          <label for="bairro">Bairro</label>
-          <input type="text" id="bairro" name="bairro" style="width: 10em" value="" />
-        </div>
-        <div class="campo">
-          <label for="estado">Estado</label>
-          <select name="estado" id="estado">
-            <option value="">--</option>
-            <option value="AC">AC</option>
-            <option value="AL">AL</option>
-            <option value="AP">AP</option>
-            <option value="AM">AM</option>
-            <option value="BA">BA</option>
-            <option value="CE">CE</option>
-            <option value="DF">DF</option>
-            <option value="ES">ES</option>
-            <option value="GO">GO</option>
-            <option value="MA">MA</option>
-            <option value="MT">MT</option>
-            <option value="MS">MS</option>
-            <option value="MG">MG</option>
-            <option value="PA">PA</option>
-            <option value="PB">PB</option>
-            <option value="PR">PR</option>
-            <option value="PE">PE</option>
-            <option value="PI">PI</option>
-            <option value="RJ">RJ</option>
-            <option value="RN">RN</option>
-            <option value="RS">RS</option>
-            <option value="RO">RO</option>
-            <option value="RR">RR</option>
-            <option value="SC">SC</option>
-            <option value="SP">SP</option>
-            <option value="SE">SE</option>
-            <option value="TO">TO</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade" style="width: 10em" value="" />
-        </div>
-
-        <button type="submit" name="submit">Enviar</button>
+        <form action="mensagem_cadastro.html" method="get" onsubmit="return ValidaCadastro(this);">
+        <fieldset>
+          <legend>Cadastro</legend>
+          <div class="msg erro" id="msg_erro"></div>
+          <div class="larg_40">
+            <label for="nome">Nome <span id="e_nome" class="erro">*</span></label>
+            <input type="text" id="nome" name="nome" value="" onclick="LimpaAviso('e_nome')" />
+          </div>
+          <div class="larg_60">
+            <label for="snome">Sobrenome <span id="e_snome" class="erro">*</span></label>
+            <input type="text" id="snome" name="snome" value="" onfocus="LimpaAviso('e_snome')" />
+          </div>
+          <div class="larg_100">
+            <label>Sexo <span id="e_sexo" class="erro">*</span></label>
+            <select name="sexo" onfocus="LimpaAviso('e_sexo')">
+              <option value="0">Selecione</option>
+              <option value="F">Feminino</option>
+              <option value="M">Masculino</option>
+            </select>
+          </div>
+          <div class="larg_100">
+            <label for="email">E-mail <span id="e_email" class="erro">*</span></label>
+            <input type="text" id="email" name="email" value="" onfocus="LimpaAviso('e_email')" />
+          </div>
+          <div class="larg_20">
+            <label for="ddd">DDD <span id="e_ddd" class="erro">*</span></label>
+            <input type="text" id="ddd" name="ddd" value="" maxlength="2" onfocus="LimpaAviso('e_ddd')" />
+          </div>
+          <div class="larg_80">
+            <label for="telefone">Telefone <span id="e_telefone" class="erro">*</span></label>
+            <input type="number" id="telefone" name="telefone"  value="" onfocus="LimpaAviso('e_telefone')" />
+          </div>
+          <div class="larg_20 tipo_logradouro">
+            <label for="tipo_logradouro">Tipo Logradouro <span id="e_tipo_logradouro" class="erro">*</span></label>
+            <select name="tipo_logradouro" onfocus="LimpaAviso('e_tipo_logradouro')">
+              <option value="0">--</option>
+              <option value="ALAMEDA">ALAMEDA</option>
+              <option value="APARTAMENTO">APARTAMENTO</option>
+              <option value="AVENIDA">AVENIDA</option>
+              <option value="BECO">BECO</option>
+              <option value="BLOCO">BLOCO</option>
+              <option value="CAMINHO">CAMINHO</option>
+              <option value="ESCADINHA">ESCADINHA</option>
+              <option value="ESTACAO">ESTAÇÃO</option>
+              <option value="ESTRADA">ESTRADA</option>
+              <option value="FAZENDA">FAZENDA</option>
+              <option value="FORTALEZA">FORTALEZA</option>
+              <option value="GALERIA">GALERIA</option>
+              <option value="LADEIRA">LADEIRA</option>
+              <option value="LARGO">LARGO</option>
+              <option value="PRACA">PRAÇA</option>
+              <option value="PARQUE">PARQUE</option>
+              <option value="PRAIA">PRAIA</option>
+              <option value="QUADRA">QUADRA</option>
+              <option value="QUILOMETRO">QUILÔMETRO</option>
+              <option value="QUINTA">QUINTA</option>
+              <option value="RODOVIA">RODOVIA</option>
+              <option value="RUA">RUA</option>
+              <option value="SUPERQUADRA">SUPER QUADRA</option>
+              <option value="TRAVESSA">TRAVESSA</option>
+              <option value="VIADUTO">VIADUTO</option>
+              <option value="VILA">VILA</option>
+            </select>
+          </div>
+          <div class="larg_60 logradouro">
+            <label for="logradouro">Logradouro <span id="e_logradouro" class="erro">*</span></label>
+            <input type="text" id="logradouro" name="logradouro" value="" onfocus="LimpaAviso('e_logradouro')" />
+          </div>
+          <div class="larg_20">
+            <label for="numero">Número <span id="e_numero" class="erro">*</span></label>
+            <input type="text" id="numero" name="numero" value="" onfocus="LimpaAviso('e_numero')" />
+          </div>
+          <div class="larg_100">
+            <label for="complemento">Complemento <span id="e_complemento" class="erro">*</span></label>
+            <input type="text" id="complemento" name="complemento" value="" />
+          </div>
+          <div class="larg_20">
+            <label for="logradouro">CEP <span id="e_cep" class="erro">*</span></label>
+            <input type="text" id="cep" name="cep" value="" onfocus="LimpaAviso('e_cep')" />
+          </div>
+          <div class="larg_40">
+            <label for="bairro">Bairro <span id="e_bairro" class="erro">*</span></label>
+            <input type="text" id="bairro" name="bairro" onfocus="LimpaAviso('e_bairro')" value="" />
+          </div>
+          <div class="larg_20">
+            <label for="estado">Estado <span id="e_estado" class="erro">*</span></label>
+            <select name="estado" id="estado" onfocus="LimpaAviso('e_estado')">
+              <option value="0">--</option>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+            </select>
+          </div>
+          <div class="larg_20">
+            <label for="cidade">Cidade <span id="e_cidade" class="erro">*</span></label>
+            <input type="text" id="cidade" name="cidade" value="" onfocus="LimpaAviso('e_cidade')" />
+          </div>
+          <div class="enviar">
+	           <input type="submit" name="submit" value="Gravar" />
+		      </div>
+        </fieldset>
       </form>
       </div>
     </section>
 
     <div class="clear"></div>
-
 
     <footer>
       <div class="rodape">
@@ -190,42 +182,5 @@
         </div>
       </div>
     </footer>
-
-    <div class="" id="resultado">
-
-    </div>
-<script type="text/javascript">
-function json(){
-	var qtd;
-	var retorno;
-
-	// Resgatar valores.
-	json.prototype.resgatarValores = function(){
-		$('#resultado').html('Carregando dados...');
-
-		// Estrutura de resultado.
-		$.getJSON('dados/cidades.json', function(data){
-			this.qtd = data.estados.length;
-			this.retorno = '';
-
-			for (i = 0; i < this.qtd; i++){
-				//this.retorno += 'ID: ' + data.usuarios[i].id + '<br />';
-				this.retorno += 'Nome: ' + data.usuarios[i].nome + ' - ';
-				//this.retorno += 'Cidade: ' + data.usuarios[i].cidade + '<br /><br />';
-			}
-
-			$('#resultado').html(this.retorno);
-		});
-
-	}
-
-}
-
-// Objeto.
-var obj = new json();
-obj.resgatarValores();
-
-</script>
-
-  </body>
+</body>
 </html>

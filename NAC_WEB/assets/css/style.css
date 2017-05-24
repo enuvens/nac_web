@@ -1,5 +1,6 @@
-html, body{
+body{
   margin: 0px;
+  font-family: 'Open Sans', 'sans-serif';
 }
 
 /* Header */
@@ -52,57 +53,151 @@ header{
   padding-left: 20px;
 }
 
-header nav ul{
-  list-style-type: none;
-}
-
-header nav ul li{
-  display: inline;
-  font-family: 'Open Sans', sans-serif;
-  color: #000;
-  padding: 10px;
-  background-color: rgba(181, 135, 109, 1);
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
-}
-
-header nav ul li a, header nav ul li a:visited{
-  color: #000;
-  text-decoration: none;
-  transition: color 0.5s;
-}
-
-header nav ul li a:hover{
-  color: #FFF;
-}
-
 /* Cadastro */
 .container{
-  width: 500px;
+  width: 900px;
   margin: auto;
 }
 
-.container h1{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  border-bottom: 1px solid #CCC;
+form {
+    display: block;
+    clear: both
+}
+form .form-group {
+    margin-bottom: 1em
 }
 
-.form_cadastro div{
-  padding:5px;
+/* Label */
+fieldset{
+  padding: 1.5em;
+  border: 1px solid #ccc;
+}
+
+fieldset legend {
+  font-size: 18px;
+  padding: 0.5em;
+  color: #555
 }
 
 label{
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  display: block;
+  margin-bottom: 0.5em;
+  color: #555;
 }
 
-input{
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select{
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  color: #555;
 }
 
+input[type="submit"]{
+  background-color: rgba(0,0,0,1);
+  -webkit-appearance: button;
+  cursor: pointer;
+  padding: 0.6em 0.9em;
+  font-size: 18px;
+  margin: 0 0 1em;
+  color: #FFF;
+  transition: background-color 1s;
+}
+
+input[type="submit"]:hover{
+	background-color: rgba(0,0,0,0.8);
+}
+
+.larg_20{
+  width: 20%;
+  float: left;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.larg_40{
+  width: 40%;
+  float: left;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.larg_50{
+  width: 50%;
+  float: left;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.larg_60{
+  width: 60%;
+  float: left;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.larg_80{
+  width: 80%;
+  float: left;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.larg_100{
+  width: 100%;
+  float: left;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.enviar{
+  clear: both;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Validação */
+.msg{
+  width: 100%;
+}
+
+.erro{
+  color: #FF0000;
+  display: none;
+}
+
+/*
+  Página de Mensagem
+*/
+.sucesso{
+  background-color: rgba(181, 135, 109, 1);
+  -moz-border-radius:7px;
+  -webkit-border-radius:7px;
+  border-radius:7px;
+  color: #000;
+  font-size: 12px;
+}
+
+.sucesso h1{
+  padding: 20px 20px 0px 20px;
+  margin-bottom: 0px;
+}
+
+.dados{
+  padding: 20px;
+}
+
+.clear{
+ clear: both;
+}
 /* Footer */
 footer{
   margin-top: 100px;
@@ -132,4 +227,64 @@ footer .rodape div{
 footer .coluna_01, footer .coluna_02, footer .coluna_03{
   width: 25%;
   float: left;
+}
+
+@media only screen and (max-width: 900px) {
+  .logo{
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    text-align: center;
+  }
+
+  .container form{
+    width:100%;
+    margin: auto;
+  }
+
+  .infos{
+    float: none !important;
+  }
+
+  .reserva, .email, .telefone{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .reserva{
+    padding-bottom: 15px;
+  }
+
+  .tipo_logradouro{
+    width: 100%;
+  }
+
+  .logradouro{
+    width: 80%;
+  }
+
+  .erro{
+    font-size: 11px;
+  }
+
+  label{
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  footer{
+    margin-top: 50px;
+    height: auto !important;
+  }
+
+  footer .rodape, .container{
+    width: 100% !important;
+  }
+
+  footer .coluna_01, footer .coluna_02, footer .coluna_03{
+    width: 80%;
+    margin: auto;
+    float: none !important;
+  }
 }
