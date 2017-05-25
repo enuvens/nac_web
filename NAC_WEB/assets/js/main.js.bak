@@ -1,6 +1,14 @@
 /*
   Validação do Formulário de cadastro
 */
+function IsEmail(email){
+    var exclude=/[^@-.w]|^[_@.-]|[._-]{2}|[@.]{2}|(@)[^@]*1/;
+    var check=/@[w-]+./;
+    var checkend=/.[a-zA-Z]{2,3}$/;
+    if(((email.search(exclude) != -1)||(email.search(check)) == -1)||(email.search(checkend) == -1)){return false;}
+    else {return true;}
+}
+
 function ValidaCadastro(frm){
 
   var msg = "";
@@ -35,7 +43,19 @@ function ValidaCadastro(frm){
     document.getElementById('e_email').style = 'display: inline;';
     valida = 1;
     msg = msg + "Você deve informar o email.<br />";
+  } else {
+    if(IsEmail(frm.email.value)){
+  
+      if (valida == 0){
+        frm.email.focus();
+      }
+      document.getElementById('e_email').style = 'display: inline;';
+      valida = 1;
+      msg = msg + "O email informado não é válido.<br />";
+    }
   }
+
+
   if(frm.ddd.value == "" || frm.ddd.value == null) {
     if (valida == 0){
       frm.ddd.focus();
