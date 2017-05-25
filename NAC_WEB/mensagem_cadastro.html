@@ -71,6 +71,7 @@
       var email             = decode_utf8(getVar('email'));
       var ddd               = decode_utf8(getVar('ddd'));
       var telefone          = decode_utf8(getVar('telefone'));
+      var tipo_telefone     = getVar('ttelefone');
       var tipo_logradouro   = decode_utf8(getVar('tipo_logradouro'));
       var logradouro        = decode_utf8(getVar('logradouro'));
       var numero            = decode_utf8(getVar('numero'));
@@ -94,8 +95,16 @@
         document.getElementById('email').innerHTML = email;
       }
 
+      if (tipo_telefone == "1"){
+        tipo_telefone = 'Comercial';
+      } else if (tipo_telefone == "2"){
+        tipo_telefone = 'Celular';
+      } else {
+        tipo_telefone = 'Residencial';
+      }
+
       if (ddd != "" || telefone != ""){
-        document.getElementById('telefone').innerHTML = '(' + ddd + ') '+ telefone;
+        document.getElementById('telefone').innerHTML = '(' + ddd + ') '+ telefone + ' ('+ tipo_telefone +')';
       }
 
       if (tipo_logradouro != "" || logradouro != "" || numero != ""){

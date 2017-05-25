@@ -52,6 +52,15 @@ function ValidaCadastro(frm){
     valida = 1;
     msg = msg + "Você deve informar o telefone.<br />";
   }
+  //alert(frm.ttelefone.value);
+  if(frm.ttelefone.value == "0") {
+    if (valida == 0){
+      frm.ttelefone.focus();
+    }
+    document.getElementById('e_ttelefone').style = 'display: inline;';
+    valida = 1;
+    msg = msg + "Você deve informar o tipo de telefone.<br />";
+  }
   if(frm.tipo_logradouro.value == "0") {
     if (valida == 0){
       frm.tipo_logradouro.focus();
